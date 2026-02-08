@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Боязнь смерти и причины</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 2px;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-weight: 300;
+            font-style: italic;
+        }
+        
+        .content {
+            font-size: 1.15rem;
+            color: #2c3e50;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title i {
+            color: #667eea;
+            font-size: 1.3rem;
+        }
+        
+        .section-text {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        
+        .quote {
+            border-left: 4px solid #764ba2;
+            padding-left: 20px;
+            margin: 25px 0;
+            font-style: italic;
+            color: #555;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+        }
+        
+        .death-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .death-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid;
+            transition: all 0.3s ease;
+        }
+        
+        .death-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .death-card.biological {
+            border-top-color: #e74c3c;
+        }
+        
+        .death-card.clinical {
+            border-top-color: #3498db;
+        }
+        
+        .death-card h3 {
+            font-size: 1.4rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .death-card h3 i {
+            font-size: 1.2rem;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .conclusion p {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .death-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+          <p>Создано Tollapu ради изучения феномена страха смерти</p>
+            <h1>Боязнь смерти и причины</h1>
+            <div class="subtitle">Экзистенциальный анализ человеческого страха</div>
+        </div>
+        
+        <div class="content">
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-brain"></i>
+                    Феномен страха смерти
+                </div>
+                <p class="section-text">
+                    <span class="highlight">Биологическая смерть</span> - явление, при котором мозг окончательно умирает, и это явление, которого многие боятся. С древних времён, смерть - самый сильный страх человека. Прямо сейчас боясь смерти, человек остерегается её только из-за ведения не той жизни, неправильной жизни, которую ему не нужно вести. Чаще всего происходит именно так, несмотря на популярность этой фобии.
+                </p>
+            </div>
+            
+            <div class="death-types">
+                <div class="death-card biological">
+                    <h3><i class="fas fa-skull"></i> Биологическая смерть</h3>
+                    <p>Полное и необратимое прекращение всех биологических функций организма, включая мозговую деятельность. Страх перед этим явлением уходит корнями в глубины человеческой психологии и является фундаментальным для нашего существования.</p>
+                </div>
+                
+                <div class="death-card clinical">
+                    <h3><i class="fas fa-heartbeat"></i> Клиническая смерть</h3>
+                    <p>Обратимое состояние, при котором отсутствуют дыхание и сердцебиение, но клетки мозга ещё живы. Пережившие её люди часто рассказывают о необычных состояниях сознания, которые порождают множество философских и духовных вопросов.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">
+                    <i class="fas fa-hospital"></i>
+                    Клиническая смерть и переживания
+                </div>
+                <p class="section-text">
+                    Следующее явление - <span class="highlight">клиническая смерть</span>. Пережившие её люди говорят о временной загробной жизни и пролёте прошлых событий на глазах. Только вот, перед смертью, нейроны начинают работать быстрее, чем обычно. Но, это почему-то внушает доверия у людей, которые боятся не успеть что-то сделать до кончины.
+                </p>
+                
+                <div class="quote">
+                    "Люди, пережившие клиническую смерть, часто описывают схожие переживания: свет в конце туннеля, ощущение покоя и просмотр ключевых моментов жизни. Эти переживания остаются одной из самых загадочных областей человеческого опыта."
+                </div>
+                
+                <p class="section-text">
+                    С боязнью умереть может быть связано множество факторов: от культурных и религиозных представлений до личного опыта и психологических особенностей. Этот страх может как парализовать, так и мотивировать человека к изменениям в жизни.
+                </p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2026 Tollapu | Изучение экзистенциальных вопросов</p>
+        </footer>
+    </div>
+</body>
+</html>
